@@ -16,7 +16,13 @@
 # Toyota Camry | Speed: 220 km/h | Mileage: 15 km/l
 
 # YOUR CODE HERE:
-
+Class Vehicle:
+ def __init__(self,name, max_speed, mileage)
+  self.name=name
+  self.max_speed= max_speed
+  self.mileage=mileage
+vehicle_inst=Vehicle('Toyota camry',200,15)
+print f'{vehicle_inst.name} | Speed:{vehicle_inst.max_speed} km/h | Mileage: {vehicle_inst.lemileage} km/l'
 
 
 
@@ -36,10 +42,27 @@
 # Final balance: 600.00
 
 # YOUR CODE HERE:
-
-
-
-
+Class BankAccount:
+  def __init__(self, owner:str , balance:float=0):
+    self.owner=owner
+    self.balance= balance
+  def deposit(self,amount):
+    dep_balance=float(amount + self.balance)
+  def withdraw(self,amount):
+    wit_balance=float(amount-self.balance)
+    if amount<self.balance:
+      print f'Insufficient funds! Balance:{self.balance} Attempted:{amount}'
+    else:
+      print ('Withdraw accepted')
+   def get_balance(self):
+     return self.balance
+    
+inst= BankAccount(Alice, 1000.5)
+print f'Accountowner:{inst.owner}'
+inst.deposit(2000)
+inst.withdraw(4000)
+inst.get_balance()
+print f'Final Balance:{self.get_balance}'
 # ---- Question 3: Temperature Converter ----
 # Create a class 'Temperature' with:
 #   - Attribute: celsius (float)
